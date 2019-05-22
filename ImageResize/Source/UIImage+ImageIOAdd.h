@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)imageio_resiImage:(NSURL *)url forSize:(CGSize)size;
 
++ (UIImage *)imageio_resiImageWithHintingAndSubsampling:(NSURL *)url forSize:(CGSize)size;
+
 @end
 
 NS_ASSUME_NONNULL_END

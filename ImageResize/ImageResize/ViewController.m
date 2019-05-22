@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Resize";
-    self.dataList = @[@"Core Graphics", @"CoreImage", @"ImageIO", @"UIKit", @"vImage"];
+    self.dataList = @[@"Core Graphics", @"CoreImage", @"ImageIO", @"UIKit", @"vImage", @"ImageIO1"];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

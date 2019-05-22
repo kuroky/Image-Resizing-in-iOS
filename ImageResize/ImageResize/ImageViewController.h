@@ -12,6 +12,7 @@ typedef NS_ENUM(NSInteger, ResizeType) {
     ResizeWithCoreGraphics              =           1,
     ResizeWithCoreImage                 =           2,
     ResizeWithImageIO                   =           3,
+    ResizeWithImageIO1                   =           6,
     ResizeWithUIKit                     =           4,
     ResizeWithvImage                    =           5
 };

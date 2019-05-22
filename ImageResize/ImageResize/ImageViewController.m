@@ -78,7 +78,10 @@
         return [UIImage uikit_resiImage:self.imgUrl forSize:self.size];
     }
     else if (self.resizeType == ResizeWithImageIO) {
-        return nil;
+        return [UIImage imageio_resiImage:self.imgUrl forSize:self.size];
+    }
+    else if (self.resizeType == ResizeWithImageIO1) {
+        return [UIImage imageio_resiImageWithHintingAndSubsampling:self.imgUrl forSize:self.size];
     }
     else if (self.resizeType == ResizeWithvImage) {
         return nil;
@@ -95,6 +98,9 @@
     }
     else if (self.resizeType == ResizeWithImageIO) {
         return @"ImageIO";
+    }
+    else if (self.resizeType == ResizeWithImageIO1) {
+        return @"ImageIO1";
     }
     else if (self.resizeType == ResizeWithUIKit) {
         return @"UIKit";
