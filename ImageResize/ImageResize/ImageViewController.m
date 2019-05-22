@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *clickButton;
 @property (nonatomic, strong) NSURL *imgUrl;
 @property (nonatomic, assign) CGSize size;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 @end
 
@@ -32,6 +33,7 @@
     [self.clickButton setTitle:@"Resize" forState:UIControlStateNormal];
     [self.clickButton setTitle:@"Resizing" forState:UIControlStateSelected];
     
+    self.activityView.hidden = YES;
     self.imgUrl = [[NSBundle mainBundle] URLForResource:@"VIIRS_3Feb2012_lrg" withExtension:@"jpg"];
 }
 
@@ -47,6 +49,8 @@
     sender.selected = YES;
     sender.userInteractionEnabled = NO;
     self.imageView.image = nil;
+    self.activityView.hidden = NO;
+    [self.activityView startAnimating];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         CFTimeInterval start = CACurrentMediaTime();
@@ -58,6 +62,8 @@
                                 self.imageView.image = image;
                             }
                             completion:^(BOOL finished) {
+                                [self.activityView stopAnimating];
+                                self.activityView.hidden = YES;
                                 sender.selected = NO;
                                 sender.userInteractionEnabled = YES;
                                 CFTimeInterval end = CACurrentMediaTime();
@@ -72,7 +78,7 @@
         return [UIImage cg_resizedImage:self.imgUrl forSize:self.size];
     }
     else if (self.resizeType == ResizeWithCoreImage) {
-        return nil;
+        return [UIImage ci_resiImage:self.imgUrl forSize:self.size];
     }
     else if (self.resizeType == ResizeWithUIKit) {
         return [UIImage uikit_resiImage:self.imgUrl forSize:self.size];
@@ -84,7 +90,7 @@
         return [UIImage imageio_resiImageWithHintingAndSubsampling:self.imgUrl forSize:self.size];
     }
     else if (self.resizeType == ResizeWithvImage) {
-        return nil;
+        return [UIImage v_resiImage:self.imgUrl forSize:self.size];
     }
     return nil;
 }

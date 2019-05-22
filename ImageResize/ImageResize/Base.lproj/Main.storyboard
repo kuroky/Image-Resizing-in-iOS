@@ -87,12 +87,21 @@
                                     <action selector="clickResize:" destination="1VR-Rx-DfJ" eventType="touchUpInside" id="bgF-4X-r8Y"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YjN-gI-XB6">
+                                <rect key="frame" x="187" y="275" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8J0-vQ-OEA"/>
+                                    <constraint firstAttribute="width" constant="40" id="v9k-JI-HuM"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YjN-gI-XB6" firstAttribute="centerY" secondItem="WT8-eh-fYL" secondAttribute="centerY" id="BvN-8C-755"/>
                             <constraint firstItem="WT8-eh-fYL" firstAttribute="leading" secondItem="YKX-WX-HDs" secondAttribute="leading" constant="10" id="DS8-xZ-0gl"/>
                             <constraint firstItem="WT8-eh-fYL" firstAttribute="top" secondItem="YKX-WX-HDs" secondAttribute="top" constant="10" id="I7b-A6-cx3"/>
                             <constraint firstItem="YKX-WX-HDs" firstAttribute="trailing" secondItem="WT8-eh-fYL" secondAttribute="trailing" constant="10" id="QPq-D0-HPi"/>
+                            <constraint firstItem="YjN-gI-XB6" firstAttribute="centerX" secondItem="WT8-eh-fYL" secondAttribute="centerX" id="eH4-eo-aPp"/>
                             <constraint firstItem="3mr-CW-K4K" firstAttribute="centerX" secondItem="aax-GP-gca" secondAttribute="centerX" id="iyw-Zm-R5Q"/>
                             <constraint firstItem="3mr-CW-K4K" firstAttribute="top" secondItem="WT8-eh-fYL" secondAttribute="bottom" constant="50" id="kKS-Xm-bxI"/>
                         </constraints>
@@ -100,6 +109,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gBI-aM-NDq"/>
                     <connections>
+                        <outlet property="activityView" destination="YjN-gI-XB6" id="0P6-tO-nkt"/>
                         <outlet property="clickButton" destination="3mr-CW-K4K" id="Hhp-p1-tC0"/>
                         <outlet property="imageView" destination="WT8-eh-fYL" id="OqA-ty-Ht0"/>
                     </connections>

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (CoreImageAdd)
 
++ (UIImage *)ci_resiImage:(NSURL *)url forSize:(CGSize)size;
+
 @end
 
 NS_ASSUME_NONNULL_END
