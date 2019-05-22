@@ -9,6 +9,12 @@
 #import "UIImage+vImageAdd.h"
 #import <Accelerate/Accelerate.h>
 
+#define ext_keywordify try {} @catch (...) {}
+
+#define onExit \
+ext_keywordify \
+__strong ext_cleanupBlock_t metamacro_concat(ext_exitBlock_, __LINE__) __attribute__((cleanup(ext_executeCleanupBlock), unused)) = ^
+
 @implementation UIImage (vImageAdd)
 
 + (UIImage *)v_resiImage:(NSURL *)url forSize:(CGSize)size {
@@ -36,7 +42,7 @@
         .bitsPerComponent = 8,
         .bitsPerPixel = 32,
         .colorSpace = NULL,
-        .bitmapInfo = kCGImageAlphaPremultipliedFirst | kCGBitmapByteOrder32Little,
+        .bitmapInfo = kCGImageAlphaFirst | kCGBitmapByteOrderDefault,
         .version = 0,
         .decode = NULL,
         .renderingIntent = kCGRenderingIntentDefault
@@ -44,8 +50,12 @@
     
     vImage_Error error;
     
+    
     // create and initialize the source buffer
-    vImage_Buffer sourceBuffer = {0};
+    __block vImage_Buffer sourceBuffer = {0}, destinationBuffer = {0};
+//    onExit {
+//        NSLog(@"yo");
+//    };
     
     error = vImageBuffer_InitWithCGImage(&sourceBuffer, &format, NULL, imgRef, kvImageNoFlags);
     if (error != kvImageNoError) {
@@ -55,7 +65,6 @@
     CGImageRelease(imgRef);
     
     // create and initialize the destination buffer
-    vImage_Buffer destinationBuffer = {0};
     error = vImageBuffer_Init(&destinationBuffer, size.height, size.width, format.bitsPerPixel, kvImageNoFlags);
     if (error != kvImageNoError) {
         return nil;
@@ -71,7 +80,12 @@
     CGImageRef resizedImage = vImageCreateCGImageFromBuffer(&destinationBuffer, &format, nil, nil, kvImageNoAllocate, &error);
     UIImage *image = [UIImage imageWithCGImage:resizedImage];
     CGImageRelease(resizedImage);
-    
+    if (sourceBuffer.data) {
+        free(sourceBuffer.data);
+    }
+    if (destinationBuffer.data) {
+        free(destinationBuffer.data);
+    }
     return image;
 };
 
