@@ -13,6 +13,13 @@
 		5B5BEB2E2294253900B3854D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BEB2D2294253900B3854D /* Assets.xcassets */; };
 		5B5BEB312294253900B3854D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BEB2F2294253900B3854D /* LaunchScreen.storyboard */; };
 		5B5BEB342294253900B3854D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5BEB332294253900B3854D /* main.m */; };
+		5B680D752294E729001E37E6 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D742294E729001E37E6 /* ImageViewController.m */; };
+		5B680D782294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D772294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.m */; };
+		5B680D7A2294FA4F001E37E6 /* VIIRS_3Feb2012_lrg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B680D792294FA4F001E37E6 /* VIIRS_3Feb2012_lrg.jpg */; };
+		5B680D7D229520B4001E37E6 /* UIImage+CoreImageAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D7C229520B4001E37E6 /* UIImage+CoreImageAdd.m */; };
+		5B680D80229522AD001E37E6 /* UIImage+UIKitAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D7F229522AD001E37E6 /* UIImage+UIKitAdd.m */; };
+		5B680D83229522B9001E37E6 /* UIImage+ImageIOAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D82229522B9001E37E6 /* UIImage+ImageIOAdd.m */; };
+		5B680D86229522C1001E37E6 /* UIImage+vImageAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B680D85229522C1001E37E6 /* UIImage+vImageAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,19 @@
 		5B5BEB302294253900B3854D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5BEB322294253900B3854D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5BEB332294253900B3854D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B680D732294E729001E37E6 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		5B680D742294E729001E37E6 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		5B680D762294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CoreGraphicsAdd.h"; sourceTree = "<group>"; };
+		5B680D772294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CoreGraphicsAdd.m"; sourceTree = "<group>"; };
+		5B680D792294FA4F001E37E6 /* VIIRS_3Feb2012_lrg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VIIRS_3Feb2012_lrg.jpg; sourceTree = "<group>"; };
+		5B680D7B229520B4001E37E6 /* UIImage+CoreImageAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CoreImageAdd.h"; sourceTree = "<group>"; };
+		5B680D7C229520B4001E37E6 /* UIImage+CoreImageAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CoreImageAdd.m"; sourceTree = "<group>"; };
+		5B680D7E229522AD001E37E6 /* UIImage+UIKitAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIKitAdd.h"; sourceTree = "<group>"; };
+		5B680D7F229522AD001E37E6 /* UIImage+UIKitAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIKitAdd.m"; sourceTree = "<group>"; };
+		5B680D81229522B9001E37E6 /* UIImage+ImageIOAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageIOAdd.h"; sourceTree = "<group>"; };
+		5B680D82229522B9001E37E6 /* UIImage+ImageIOAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageIOAdd.m"; sourceTree = "<group>"; };
+		5B680D84229522C1001E37E6 /* UIImage+vImageAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+vImageAdd.h"; sourceTree = "<group>"; };
+		5B680D85229522C1001E37E6 /* UIImage+vImageAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+vImageAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +62,7 @@
 		5B5BEB182294253800B3854D = {
 			isa = PBXGroup;
 			children = (
+				5B680D6F2294E39A001E37E6 /* Source */,
 				5B5BEB232294253800B3854D /* ImageResize */,
 				5B5BEB222294253800B3854D /* Products */,
 			);
@@ -58,10 +79,13 @@
 		5B5BEB232294253800B3854D /* ImageResize */ = {
 			isa = PBXGroup;
 			children = (
+				5B680D792294FA4F001E37E6 /* VIIRS_3Feb2012_lrg.jpg */,
 				5B5BEB242294253800B3854D /* AppDelegate.h */,
 				5B5BEB252294253800B3854D /* AppDelegate.m */,
 				5B5BEB272294253800B3854D /* ViewController.h */,
 				5B5BEB282294253800B3854D /* ViewController.m */,
+				5B680D732294E729001E37E6 /* ImageViewController.h */,
+				5B680D742294E729001E37E6 /* ImageViewController.m */,
 				5B5BEB2A2294253800B3854D /* Main.storyboard */,
 				5B5BEB2D2294253900B3854D /* Assets.xcassets */,
 				5B5BEB2F2294253900B3854D /* LaunchScreen.storyboard */,
@@ -69,6 +93,23 @@
 				5B5BEB332294253900B3854D /* main.m */,
 			);
 			path = ImageResize;
+			sourceTree = "<group>";
+		};
+		5B680D6F2294E39A001E37E6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B680D762294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.h */,
+				5B680D772294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.m */,
+				5B680D7B229520B4001E37E6 /* UIImage+CoreImageAdd.h */,
+				5B680D7C229520B4001E37E6 /* UIImage+CoreImageAdd.m */,
+				5B680D7E229522AD001E37E6 /* UIImage+UIKitAdd.h */,
+				5B680D7F229522AD001E37E6 /* UIImage+UIKitAdd.m */,
+				5B680D81229522B9001E37E6 /* UIImage+ImageIOAdd.h */,
+				5B680D82229522B9001E37E6 /* UIImage+ImageIOAdd.m */,
+				5B680D84229522C1001E37E6 /* UIImage+vImageAdd.h */,
+				5B680D85229522C1001E37E6 /* UIImage+vImageAdd.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +171,7 @@
 			files = (
 				5B5BEB312294253900B3854D /* LaunchScreen.storyboard in Resources */,
 				5B5BEB2E2294253900B3854D /* Assets.xcassets in Resources */,
+				5B680D7A2294FA4F001E37E6 /* VIIRS_3Feb2012_lrg.jpg in Resources */,
 				5B5BEB2C2294253800B3854D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B680D752294E729001E37E6 /* ImageViewController.m in Sources */,
+				5B680D782294EDE3001E37E6 /* UIImage+CoreGraphicsAdd.m in Sources */,
 				5B5BEB292294253800B3854D /* ViewController.m in Sources */,
 				5B5BEB342294253900B3854D /* main.m in Sources */,
+				5B680D80229522AD001E37E6 /* UIImage+UIKitAdd.m in Sources */,
+				5B680D7D229520B4001E37E6 /* UIImage+CoreImageAdd.m in Sources */,
 				5B5BEB262294253800B3854D /* AppDelegate.m in Sources */,
+				5B680D86229522C1001E37E6 /* UIImage+vImageAdd.m in Sources */,
+				5B680D83229522B9001E37E6 /* UIImage+ImageIOAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
