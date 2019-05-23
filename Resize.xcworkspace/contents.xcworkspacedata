@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ImageResize/ImageResize.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Image-Resizing-Example-master/Image Resizing.xcodeproj">
+   </FileRef>
+</Workspace>
