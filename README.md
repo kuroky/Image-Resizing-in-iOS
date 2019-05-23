@@ -250,3 +250,9 @@ iPhone 7 running iOS 12.2
 | UIKit | 0.31 | 14.x-40-14.x | 0-40-0 |
 | CoreImage | 2.21 | 14.x-5xx-14.x | 0-100-0 |
 | vImage | 1.67 | 14.x—6xx-14.x | 0-162-0 |
+
+> [Image Resizing Techniques - Mattt](https://nshipster.com/image-resizing/)
+> [iOS平台图片编解码入门教程（vImage篇）- 小猪](https://dreampiggy.com/2017/11/12/iOS%E5%B9%B3%E5%8F%B0%E5%9B%BE%E7%89%87%E7%BC%96%E8%A7%A3%E7%A0%81%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%EF%BC%88vImage%E7%AF%87%EF%BC%89/)
+> [OTLargeImageReader](https://github.com/OpenFibers/OTLargeImageReader)
+> 
+
