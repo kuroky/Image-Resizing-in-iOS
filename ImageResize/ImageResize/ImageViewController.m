@@ -13,6 +13,8 @@
 #import "UIImage+ImageIOAdd.h"
 #import "UIImage+vImageAdd.h"
 
+static NSInteger const  kTotalCount     =   20;
+
 @interface ImageViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -73,6 +75,31 @@
     });
 }
 
+- (IBAction)clickTest:(UIButton *)sender {
+    sender.userInteractionEnabled = NO;
+    [sender setTitle:@"Testing..." forState:UIControlStateNormal];
+    
+    self.activityView.hidden = NO;
+    [self.activityView startAnimating];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        CFTimeInterval start = CACurrentMediaTime();
+        for (NSInteger i = 0; i < kTotalCount; i++) {
+            [self resizeImage];
+        }
+        
+        CFTimeInterval end = CACurrentMediaTime();
+        dispatch_async(dispatch_get_main_queue(), ^{
+            sender.userInteractionEnabled = YES;
+            [sender setTitle:@"DoTest" forState:UIControlStateNormal];
+             NSLog(@"test time: %.2fs", (end - start) / kTotalCount);
+            
+            self.activityView.hidden = YES;
+            [self.activityView stopAnimating];
+        });
+    });
+}
+
 - (UIImage *)resizeImage {
     if (self.resizeType == ResizeWithCoreGraphics) {
         return [UIImage cg_resizedImage:self.imgUrl forSize:self.size];
@@ -97,7 +124,7 @@
 
 - (NSString *)resizeMethod {
     if (self.resizeType == ResizeWithCoreGraphics) {
-        return @"CoreGraphics";
+        return @"Core Graphics";
     }
     else if (self.resizeType == ResizeWithCoreImage) {
         return @"CoreImage";

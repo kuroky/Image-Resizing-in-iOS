@@ -94,13 +94,27 @@
                                     <constraint firstAttribute="width" constant="40" id="v9k-JI-HuM"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML1-0R-WNy">
+                                <rect key="frame" x="157" y="632" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.56078431370000004" green="0.56470588239999997" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IEE-Mc-LPD"/>
+                                    <constraint firstAttribute="width" constant="100" id="lPG-zi-qEZ"/>
+                                </constraints>
+                                <state key="normal" title="DoTest"/>
+                                <connections>
+                                    <action selector="clickTest:" destination="1VR-Rx-DfJ" eventType="touchUpInside" id="x9k-bC-9XF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ML1-0R-WNy" firstAttribute="centerX" secondItem="aax-GP-gca" secondAttribute="centerX" id="18f-EL-UcD"/>
                             <constraint firstItem="YjN-gI-XB6" firstAttribute="centerY" secondItem="WT8-eh-fYL" secondAttribute="centerY" id="BvN-8C-755"/>
                             <constraint firstItem="WT8-eh-fYL" firstAttribute="leading" secondItem="YKX-WX-HDs" secondAttribute="leading" constant="10" id="DS8-xZ-0gl"/>
                             <constraint firstItem="WT8-eh-fYL" firstAttribute="top" secondItem="YKX-WX-HDs" secondAttribute="top" constant="10" id="I7b-A6-cx3"/>
                             <constraint firstItem="YKX-WX-HDs" firstAttribute="trailing" secondItem="WT8-eh-fYL" secondAttribute="trailing" constant="10" id="QPq-D0-HPi"/>
+                            <constraint firstItem="ML1-0R-WNy" firstAttribute="top" secondItem="3mr-CW-K4K" secondAttribute="bottom" constant="50" id="bQ4-wU-Vpg"/>
                             <constraint firstItem="YjN-gI-XB6" firstAttribute="centerX" secondItem="WT8-eh-fYL" secondAttribute="centerX" id="eH4-eo-aPp"/>
                             <constraint firstItem="3mr-CW-K4K" firstAttribute="centerX" secondItem="aax-GP-gca" secondAttribute="centerX" id="iyw-Zm-R5Q"/>
                             <constraint firstItem="3mr-CW-K4K" firstAttribute="top" secondItem="WT8-eh-fYL" secondAttribute="bottom" constant="50" id="kKS-Xm-bxI"/>

@@ -241,4 +241,12 @@ func resizedImage(at url: URL, for size: CGSize) -> UIImage? {
 - 最后，根据目标buffer的iamge data 创建出image
 
 #### 性能测试
-iPhone 7 running iOS 12.2
+iPhone 7 running iOS 12.2   
+
+|   | 时间(s) | 内存占用(M) | CPU占用(%)  |
+| :-- | :-: | :-: | :-: |
+| Core Graphics | 0.13 | 14.x-24-14.x | 0-30-0 |
+| ImageIO | 0.13 | 14.x-25-15.x | 0-30-0 |
+| UIKit | 0.31 | 14.x-40-14.x | 0-40-0 |
+| CoreImage | 2.21 | 14.x-5xx-14.x | 0-100-0 |
+| vImage | 1.67 | 14.x—6xx-14.x | 0-162-0 |
