@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BE9889C229E33A6002F4333 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE9889B229E33A6002F4333 /* ImageViewController.swift */; };
 		F80ADD5E2280467C000F2B19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80ADD5D2280467C000F2B19 /* AppDelegate.swift */; };
 		F80ADD602280467C000F2B19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80ADD5F2280467C000F2B19 /* ViewController.swift */; };
 		F80ADD632280467C000F2B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80ADD612280467C000F2B19 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BE9889B229E33A6002F4333 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		F80ADD5A2280467C000F2B19 /* Image Resizing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image Resizing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80ADD5D2280467C000F2B19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F80ADD5F2280467C000F2B19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				F80ADD5D2280467C000F2B19 /* AppDelegate.swift */,
 				F80ADD5F2280467C000F2B19 /* ViewController.swift */,
+				5BE9889B229E33A6002F4333 /* ImageViewController.swift */,
 				F80ADD612280467C000F2B19 /* Main.storyboard */,
 				F80ADD642280467D000F2B19 /* Assets.xcassets */,
 				F80ADD662280467D000F2B19 /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 				F80ADD602280467C000F2B19 /* ViewController.swift in Sources */,
 				F80ADD5E2280467C000F2B19 /* AppDelegate.swift in Sources */,
 				F80ADD8F228084E9000F2B19 /* UIKit.swift in Sources */,
+				5BE9889C229E33A6002F4333 /* ImageViewController.swift in Sources */,
 				F80ADD8C228070AF000F2B19 /* CoreImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
