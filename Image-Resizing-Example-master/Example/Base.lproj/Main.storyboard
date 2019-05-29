@@ -82,7 +82,7 @@
                                 <rect key="frame" x="147" y="536" width="120" height="45"/>
                                 <color key="backgroundColor" red="0.56078431370000004" green="0.56470588239999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="YIZ-gu-mjG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="YIZ-gu-mjG"/>
                                     <constraint firstAttribute="height" constant="45" id="ZdD-T0-9W9"/>
                                 </constraints>
                                 <state key="normal" title="Resize"/>
@@ -95,7 +95,7 @@
                                 <color key="backgroundColor" red="0.56078431370000004" green="0.56470588239999997" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="bja-di-nXI"/>
-                                    <constraint firstAttribute="width" constant="120" id="plt-WR-ds8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="plt-WR-ds8"/>
                                 </constraints>
                                 <state key="normal" title="DoTest"/>
                                 <connections>

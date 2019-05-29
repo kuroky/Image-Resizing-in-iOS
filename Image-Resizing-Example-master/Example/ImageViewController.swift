@@ -65,25 +65,47 @@ class ImageViewController: UIViewController {
                 let duration = 1.0;
                 UIView.transition(with: self.imageView,
                                   duration: duration,
-                                  options: .curveEaseOut,
+                                  options: [.curveEaseOut, .transitionCrossDissolve],
                                   animations: {
                                     self.imageView.image = image
-                }, completion: { _ in
+                },
+                                  completion: { _ in
                     self.activityView.stopAnimating()
                     self.activityView.isHidden = true
                     sender.isSelected = false
                     sender.isUserInteractionEnabled = true
                     let end = CACurrentMediaTime()
-                    print("%@ time: %.2fs", self.resizeMethod() as String, end - start - duration);
+                    print("\(self.resizeMethod()) time: \(String(format: "%.2f", end - start - duration))s");
                 })
             }
         }
     }
     
     @IBAction func clickTest(_ sender: UIButton) {
-    
-    }
+        sender.isUserInteractionEnabled = false
+        sender.setTitle("Testing...", for: .normal)
         
+        self.activityView.isHidden = false
+        self.activityView.startAnimating()
+        
+        DispatchQueue.global().async {
+            let start = CACurrentMediaTime()
+            for _ in 1...20 {
+                _ = self.resizeImage()
+            }
+            
+            let end = CACurrentMediaTime()
+            DispatchQueue.main.async {
+                sender.isUserInteractionEnabled = true
+                sender.setTitle("DoTest", for: .normal)
+                print("\(self.resizeMethod()) test time: \(String(format: "%.2f", (end - start) / 20))s");
+                self.activityView.isHidden = true
+                self.activityView.startAnimating()
+            }
+        }
+    }
+    
+    //MARK:- 生成图片
     func resizeImage() -> UIImage? {
         if (self.resizeType == ResizeType.ResizeWithCoreGraphics.rawValue) {
             return CoreGraphics.resizedImage(at: self.imgUrl, for: self.size)
@@ -106,7 +128,7 @@ class ImageViewController: UIViewController {
         return nil;
     }
 
-    func resizeMethod() -> String! {
+    func resizeMethod() -> String {
         if (self.resizeType == ResizeType.ResizeWithCoreGraphics.rawValue) {
             return "Core Graphics";
         }
@@ -125,6 +147,6 @@ class ImageViewController: UIViewController {
         else if (self.resizeType == ResizeType.ResizeWithvImage.rawValue) {
             return "vImage";
         }
-        return nil;
+        return "";
     }
 }
